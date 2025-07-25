@@ -1,0 +1,25 @@
+*{
+    font-family: monospace;
+    margin: 0px;
+}
+
+.playerSection
+{
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    background-color: peachpuff;
+}
+
+.computerSection
+{
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    background-color: peachpuff;
+}
+
+.choice 
+{
+    margin: 15px;
+}
