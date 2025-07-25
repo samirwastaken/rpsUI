@@ -3,23 +3,40 @@
     margin: 0px;
 }
 
-.playerSection
-{
-    text-align: center;
-    width: 600px;
-    height: 400px;
-    background-color: peachpuff;
-}
 
-.computerSection
+.section
 {
     text-align: center;
     width: 600px;
     height: 400px;
-    background-color: peachpuff;
+    background-color: whitesmoke;
+    border: 2px solid burlywood;
+    margin-top: 10px;
 }
 
 .choice 
 {
-    margin: 15px;
+    flex-direction: row;
+    
+}
+
+.flex-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+
+}
+
+.header{
+    background-color: whitesmoke;
+}
+
+.gameScreen
+{
+    padding: 15px;
+    color: whitesmoke
 }
