@@ -11,8 +11,8 @@ const computerChoiceDisplay = document.getElementById("computerChoice");
 const roundWinnder = document.getElementById("roundWinner");
 
 // Variables for the game
-const playerScore = 0;
-const computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 const gameChoices = ["rock", "paper", "scissors"];
 
 
@@ -25,30 +25,32 @@ function getComputerChoice()
 
 
 // the game. Rock = 0, Paper = 1, Scisssors = 2
-function playRound(playerChoice, computerChoice)
+function playRound(playerChoice, getComputerChoice)
 {  
-    if ((playerChoice == 0 && computerChoice == 1) || (playerChoice == 1 && computerChoice == 2) || (playerChoice == 2 && computerChoice == 0))
+
+    const computerSelection = getComputerChoice();
+    if ((playerChoice == 0 && computerSelection == 1) || (playerChoice == 1 && computerSelection == 2) || (playerChoice == 2 && computerSelection == 0))
     {
         // Updating the player and computer choices
         playerChoiceDisplay.textContent = "You chose: " + gameChoices[playerChoice];
-        computerChoiceDisplay.textContent = "Computer chose: " + gameChoices[computerChoice];
+        computerChoiceDisplay.textContent = "Computer chose: " + gameChoices[computerSelection];
         roundWinnder.textContent = "You lost this round.";
         
         // Updating the score
         computerScore++;
-        computerChoiceDisplay.textContent = "Score: " + computerScore;
+        computerScoreDisplay.textContent = "Score: " + computerScore;
     }
-    else if (playerChoice == computerChoice)
+    else if (playerChoice == computerSelection)
     {
         playerChoiceDisplay.textContent = "You chose: " + gameChoices[playerChoice];
-        computerChoiceDisplay.textContent = "Computer chose: " + gameChoices[computerChoice];
+        computerChoiceDisplay.textContent = "Computer chose: " + gameChoices[computerSelection];
         roundWinnder.textContent = "Its a Draw!"
     }
     else
     {
         playerChoiceDisplay.textContent = "You chose: " + gameChoices[playerChoice];
-        computerChoiceDisplay.textContent = "Computer chose: " + gameChoices[computerChoice];
-        roundWinnder.textContent = "You lost this round."
+        computerChoiceDisplay.textContent = "Computer chose: " + gameChoices[computerSelection];
+        roundWinnder.textContent = "You won this round!"
         playerScore++;
         playerScoreDisplay.textContent = "Score: " + playerScore;
     }
